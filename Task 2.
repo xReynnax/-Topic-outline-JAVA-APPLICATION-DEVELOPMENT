@@ -1,0 +1,32 @@
+// Task 2.
+// Using the for loop.
+
+class  FactorialCalculator1 {
+    public static void main(String[] arguments) {
+        int i,fact=1;
+        int number=5; //Number of factorial.
+        for(i=1;i<=number;i++){
+            fact=fact*i;
+        }
+        System.out.println("Factorial of "+number+" is: "+fact);
+    }
+}
+
+//Using a recursive call.
+
+class  FactorialCalculator2 {
+
+    public static long multiplyNumbers(int num)
+    {
+        if (num >= 1) {
+            return num * multiplyNumbers(num - 1);
+        } else {
+            return 1;
+        }
+    }
+    public static void main(String[] args) {
+        int num = 4;
+        long factorial = multiplyNumbers(num);
+        System.out.println("Factorial of " + num + " = " + factorial);
+    }
+}
