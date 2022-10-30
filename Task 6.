@@ -1,0 +1,67 @@
+// Task 6.
+
+import java.util.ArrayList;
+
+interface Animal
+{
+    String makeSound();
+    String getName();
+}
+class Cat implements Animal {
+    private String name;
+
+    public Cat(String name)
+    {
+        this.name = name;
+    }
+    public String getName()
+    {
+        return name;
+    }
+    public String makeSound(){
+        return "Meow";
+    }
+}
+class Dog implements Animal{
+    private String name;
+
+    public Dog(String name)
+    {
+        this.name = name;
+    }
+    public String getName()
+    {
+        return name;
+    }
+    public String makeSound(){
+        return "Bark";
+    }
+}
+class Fox implements Animal {
+    private String name;
+
+    public Fox(String name)
+    {
+        this.name = name;
+    }
+    public String getName()
+    {
+        return name;
+    }
+    public String makeSound(){
+        return "Wa-pow";
+    }
+}
+
+class Animals {
+    public static void main(String[] args) {
+        ArrayList<Animal> animals = new ArrayList<Animal>();
+        animals.add(new Cat("Cat"));
+        animals.add(new Dog("Dog"));
+        animals.add(new Fox("Fox"));
+
+        for (Animal animal : animals) {
+            System.out.println(animal.getName() + " : " + animal.makeSound());
+        }
+    }
+}
