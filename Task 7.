@@ -1,0 +1,69 @@
+// Task 7.
+
+interface Animal
+{
+    String makeSound();
+}
+interface Domestic
+{
+    void printName(String i);
+}
+interface Wild
+{
+    String getToy();
+}
+class Cat implements Animal,Domestic,Wild {
+    static public String name = "nameless cat";
+
+    public void printName(String name) {
+        Cat.name=name;
+    }
+    public String makeSound(){
+        return "Meow";
+    }
+    public String getToy() {
+        return "Mouse";
+    }
+}
+class Dog implements Animal,Domestic,Wild{
+    static public String name = "nameless dog";
+
+    public void printName(String name) {
+        Dog.name=name;
+    }
+
+    public String makeSound(){
+        return "Bark";
+    }
+    public String getToy() {
+        return "Bone";
+    }
+}
+class Fox implements Animal,Domestic,Wild {
+    static public String name = "nameless fox";
+
+    public void printName(String name) {
+        Fox.name=name;
+    }
+    public String makeSound(){
+        return "Wa-pow";
+    }
+    public String getToy() {
+        return "Food";
+    }
+}
+
+class Animals {
+    public static void main(String[] args) {
+        Cat cat = new Cat();
+        cat.printName("Simba");
+        Dog dog = new Dog();
+        dog.printName("Ricy");
+        Fox fox = new Fox();
+        fox.printName("Layla");
+        System.out.println("Cat name is: " + Cat.name + ". It says " +cat.makeSound() + ". It favourite toy is: " + cat.getToy());
+        System.out.println("Dog name is: " + Dog.name + ". It says " + dog.makeSound() + ". It favourite toy is: " + dog.getToy());
+        System.out.println("Fox name is: " + Fox.name + ". It says " + fox.makeSound() + ". It favourite toy is: " + fox.getToy());
+    }
+}
+
